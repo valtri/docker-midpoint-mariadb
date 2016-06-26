@@ -12,14 +12,14 @@ RUN apt-get update && apt-get install -y \
 && rm -rf /var/lib/apt/lists/*
 
 # for repo-ninja
-RUN ln -s /usr/share/java/mysql-connector-java.jar midpoint-${v}/lib/
+RUN ln -s /usr/share/java/mysql-connector-java.jar /opt/midpoint-${v}/lib/
 
 COPY midpoint.cnf /etc/mysql/conf.d/
 RUN pass='changeit' \
 && service mysql start \
 && mysql -e "CREATE DATABASE midpoint CHARACTER SET utf8 DEFAULT CHARACTER SET utf8 COLLATE utf8_bin DEFAULT COLLATE utf8_bin" \
 && mysql -e "GRANT ALL ON midpoint.* TO midpoint@localhost IDENTIFIED BY '${pass}'" \
-&& mysql -u midpoint -p${pass} midpoint < midpoint-${v}/${schema}
+&& mysql -u midpoint -p${pass} midpoint < /opt/midpoint-${v}/${schema}
 
 RUN xmlstarlet ed --inplace --update '/configuration/midpoint/repository' --value '' /var/opt/midpoint/config.xml
 COPY config-repo.txt .
