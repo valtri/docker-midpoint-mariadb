@@ -1,0 +1,8 @@
+repositoryServiceFactoryClass com.evolveum.midpoint.repo.sql.SqlRepositoryFactory
+embedded             false
+driverClassName      org.gjt.mm.mysql.Driver
+jdbcUsername         midpoint
+jdbcPassword         changeit
+jdbcUrl              jdbc:mysql://localhost/midpoint?characterEncoding=utf8
+hibernateDialect     com.evolveum.midpoint.repo.sql.util.MidPointMySQLDialect
+hibernateHbm2ddl     validate

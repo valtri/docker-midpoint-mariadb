@@ -1,0 +1,5 @@
+repositoryServiceFactoryClass com.evolveum.midpoint.repo.sql.SqlRepositoryFactory
+database             mysql
+jdbcUsername         midpoint
+jdbcPassword         changeit
+jdbcUrl              jdbc:mysql://localhost/midpoint?characterEncoding=utf8
