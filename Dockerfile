@@ -1,9 +1,9 @@
 FROM valtri/docker-midpoint:latest
 MAINTAINER František Dvořák <valtri@civ.zcu.cz>
 
-ENV v 3.4
+ENV v 3.4.1
 #ENV schema config/sql/midpoint/3.4/mysql/mysql-3.4.sql
-ENV schema config/sql/_all/mysql-3.4-all.sql
+ENV schema config/sql/_all/mysql-3.4.1-all.sql
 
 WORKDIR /root
 
