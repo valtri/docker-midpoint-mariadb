@@ -1,2 +1,7 @@
-[mysqld]
-innodb_large_prefix=on
+[global]
+max_allowed_packet = 256M
+# tuning
+#query_cache_type=0
+#innodb_buffer_pool_size=1G
+#innodb_buffer_pool_instances=1
+#innodb_log_file_size=400M
