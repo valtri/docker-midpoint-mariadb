@@ -1,6 +1,6 @@
 repositoryServiceFactoryClass com.evolveum.midpoint.repo.sql.SqlRepositoryFactory
 embedded             false
-driverClassName      org.gjt.mm.mysql.Driver
+driverClassName      com.mysql.jdbc.Driver
 jdbcUsername         midpoint
 jdbcPassword         changeit
 jdbcUrl              jdbc:mysql://localhost/midpoint?characterEncoding=utf8
