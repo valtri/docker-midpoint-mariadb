@@ -10,3 +10,7 @@ This image adds MariaDB repository support.
 
     docker pull valtri/docker-midpoint-mariadb
     docker run -itd --name midpoint valtri/docker-midpoint-mariadb
+
+# Tags
+
+* **latest**: midPoint 3.6
